@@ -61,7 +61,11 @@ const postEmployeeRoleBodySchema = {
 
 const postAddressBodySchema = {
     body: joi.object().keys({
-        address: joi.string().max(128).required()
+        housename: joi.string().max(128).required(),
+        city : joi.string().max(20).required(),
+        state : joi.string().max(20).required(),
+        pincode : joi.number().max(999999).required(),
+        street : joi.string().max(50).required()
     }).unknown(false)
 }
 

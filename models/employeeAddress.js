@@ -8,10 +8,26 @@ const EmpAddr = sequelize.define('employee_address', {
         allowNull: false,
         unique: true
     },
-    address: {
+    housename: {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true
+    },
+    city: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    state: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    pincode :{
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    street:{
+        type: Sequelize.STRING,
+        allowNull: false
     }
 });
 

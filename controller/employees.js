@@ -182,11 +182,19 @@ exports.deleteEmployee = (req, resp, next) => {
 
 exports.postaddress = (req, resp, next) => {
     const empId = req.params.id;
-    const addr = req.body.address;
+    const housename = req.body.housename;
+    const city = req.body.city;
+    const state = req.body.state;
+    const pincode = req.body.pincode;
+    const street = req.body.street;
 
     address.create({
             empId: empId,
-            address: addr
+            housename : housename,
+            city : city,
+            state :state,
+            pincode :pincode,
+            street : street
         })
         .then(addr => {
             resp.status(200).json({
